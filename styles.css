@@ -3,3 +3,10 @@ body{
     margin: 0;
     justify-content: center;
 }
+#container{
+    width: 960px;
+    height: 960px;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 1px;
+}
