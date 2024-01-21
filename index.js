@@ -1,6 +1,7 @@
 let gridSize = prompt('Enter n * n grid size','16');
 const gridLoop = gridSize * gridSize; //For square grid of n*n
-
+const gapPixels = gridSize - 1; // so that gap-pixels gets subtracted from total
+const gridFlexPixels = (960 - gapPixels) / gridSize; //formula to get n*n grid
 const container = document.querySelector('#container');
 // To get n-square divs for grid
 for(let i = 1; i <= gridLoop; i++){  
