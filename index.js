@@ -3,7 +3,21 @@ function grid(){
     //container-content clears out so that existing
     //grid is removed
     document.getElementById("container").innerHTML = ''; 
+
     let gridSize = prompt('Enter n * n grid size','16');
+
+    //to set the grid limit between 2 - 100
+    let gridSizeValue = Number(gridSize);
+    if(gridSizeValue < 2){
+        alert('Invalid Number:Type value between 2-100');
+        gridSize = 16;    
+    } else if(gridSizeValue > 100){
+        alert('Invalid Number:Type value between 2-100');
+        gridSize = 16;
+    } else{
+        alert(`${gridSize} is Valid Number`);
+        gridSize = gridSize;
+    }
 
     //For loop of square grid of n*n
     const gridLoop = gridSize * gridSize; 
