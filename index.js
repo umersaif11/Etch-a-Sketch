@@ -4,16 +4,16 @@ function grid(){
     //grid is removed
     document.getElementById("container").innerHTML = ''; 
 
-    let gridSize = prompt('Enter n * n grid size','16');
+    let gridSize = prompt('Enter n * n grid size','5');
 
     //to set the grid limit between 2 - 100
     let gridSizeValue = Number(gridSize);
     if(gridSizeValue < 2){
         alert('Invalid Number:Type value between 2-100');
-        gridSize = 16;    
+        gridSize = 5;    
     } else if(gridSizeValue > 100){
         alert('Invalid Number:Type value between 2-100');
-        gridSize = 16;
+        gridSize = 5;
     } else{
         alert(`${gridSize} is Valid Number`);
         gridSize = gridSize;
@@ -43,17 +43,12 @@ function grid(){
    //flex-basis(width) and height using formula above. 
    //Also add eventlisteners for hovering effect
    gridFlexItems.forEach((item) => {
-       item.style.flexBasis = gridFlexPixels + 'px';
+       item.style.width = gridFlexPixels + 'px';
        item.style.height = gridFlexPixels + 'px';
 
        //when mouse cursor goes into box
        item.addEventListener("mouseover", () => {
            item.style.backgroundColor = '#ff000080';
-        });
-       //when mouse cursor goes out of box
-       //to retain its original color 
-       item.addEventListener("mouseout", () => {
-           item.style.backgroundColor = '#7b3f00';
         });
 })
 }  
